@@ -219,7 +219,7 @@ body {
     text-decoration: none;
     color: var(--text-secondary);
     font-size: 1.05rem;
-    font-weight: 400;
+    font-weight: 600;
     letter-spacing: -0.01em;
     transition: color 0.3s ease;
 }
@@ -588,7 +588,7 @@ main {
     background-size: 0% 100%;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    transition: background-size 0.6s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
+    transition: background-size 0.5s cubic-bezier(0.25, 1, 0.5, 1), color 0.3s ease;
 }
 
 .testimonial-card:hover .highlight-text {
@@ -596,12 +596,12 @@ main {
     color: #1A1A1A;
 }
 
-/* Sequential Highlight Delays */
+/* Sequential Highlight Delays - Faster and only applies on hover */
 .testimonial-card:hover .line-1 { transition-delay: 0s; }
-.testimonial-card:hover .line-2 { transition-delay: 0.4s; }
-
-.line-1 { transition-delay: 0.4s; }
-.line-2 { transition-delay: 0s; }
+.testimonial-card:hover .line-2 { transition-delay: 0.15s; }
+.testimonial-card:hover .line-3 { transition-delay: 0.3s; }
+.testimonial-card:hover .line-4 { transition-delay: 0.45s; }
+.testimonial-card:hover .line-5 { transition-delay: 0.6s; }
 
 .author {
     margin-top: auto;

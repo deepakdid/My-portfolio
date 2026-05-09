@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -29,7 +29,7 @@
                 <ul class="nav-links">
                     <li><a href="../index.html#work">Work</a></li>
                     <li><a href="../about.html">About</a></li>
-                    <li><a href="#resume">Resume</a></li>
+                    <li><a href="https://drive.google.com/file/d/19MuIzzQ3Y2kcSBk3dsdSaNzk-YgK9j72/view?usp=sharing" target="_blank">Resume</a></li>
                 </ul>
                 <a href="https://mail.google.com/mail/?view=cm&fs=1&to=deepak.thinkux@gmail.com" target="_blank" class="hire-me-btn">
                     <span class="status-dot"></span>
@@ -87,21 +87,35 @@
                 <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 1rem;">
                     <li style="display: flex; gap: 0.75rem; color: var(--text-secondary); font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
                         <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
-                        <span>Neartail is a food-order-form builder, used by meal-prep companies, office canteens, bakeries, and caterers whose menus change weekly. I designed the version that lives inside ChatGPT.</span>
+                        <span>Neartail is a food-order-form builder used by meal-prep services, office canteens, bakeries, and caterers whose menus change weekly. I designed the version that lives inside ChatGPT.</span>
                     </li>
                     <li style="display: flex; gap: 0.75rem; color: var(--text-secondary); font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
                         <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
-                        <span>I owned end-to-end design the in-chat widget, the create/edit/publish flow, and the feature explainer images for the App listing.</span>
-                    </li>
-                    <li style="display: flex; gap: 0.75rem; color: var(--text-secondary); font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
-                        <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
-                        <span>Designed strictly against OpenAI's published UX and UI principles for the Apps SDK narrow width, no modals, render-first, and the &ldquo;don't leave the chat&rdquo; rule.</span>
+                        <span>I owned design end-to-end the in-chat widget, the create/edit/publish flow, and the feature explainer images for the App listing. Designed strictly against OpenAI's published Apps SDK principles: narrow width, no modals, render-first, and the "don't leave the chat" rule.</span>
                     </li>
                     <li style="display: flex; gap: 0.75rem; color: var(--text-secondary); font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
                         <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
                         <span>Live on ChatGPT Apps as of Apr 23, 2026, after passing OpenAI's review on resubmission.</span>
                     </li>
                 </ul>
+
+                <div class="sprint-plan-grid" style="grid-template-columns: repeat(3, 1fr); margin-top: 2.5rem; gap: 24px;">
+                    <div class="sprint-day-card">
+                        <div class="sprint-day-label">PRODUCT</div>
+                        <div class="sprint-day-title" style="font-size: clamp(14px, 1.4vw, 18px);">CHATGPT APP</div>
+                        <p class="sprint-day-text">In-chat widget &amp; flow</p>
+                    </div>
+                    <div class="sprint-day-card">
+                        <div class="sprint-day-label">TIMELINE</div>
+                        <div class="sprint-day-title" style="font-size: clamp(14px, 1.4vw, 18px);">DEC 2025 &ndash; APR 2026</div>
+                        <p class="sprint-day-text">Design completed in 1 month</p>
+                    </div>
+                    <div class="sprint-day-card">
+                        <div class="sprint-day-label">TEAM</div>
+                        <div class="sprint-day-title" style="font-size: clamp(14px, 1.4vw, 18px);">LED DESIGNER</div>
+                        <p class="sprint-day-text">Founder, co-founder, 1 developer</p>
+                    </div>
+                </div>
             </section>
 
 
@@ -112,9 +126,7 @@
             <div class="case-study-layout">
                 <aside class="case-sidebar">
                     <ul class="sidebar-nav">
-                        <li><a href="#overview-context">Overview &amp; Context</a></li>
                         <li><a href="#problem">Problem</a></li>
-                        <li><a href="#my-role">MY ROLE</a></li>
                         <li><a href="#designing-under-openai-rules">Designing Under OpenAI's Rules</a></li>
                         <li><a href="#core-widget">Core widget</a></li>
                         <li><a href="#create-edit-publish">Create &rarr; Edit &rarr; Publish</a></li>
@@ -126,43 +138,7 @@
                 
                 <div class="case-content">
 
-            <!-- Overview & Context -->
-            <section id="overview-context" class="overview-context-section" style="padding: 64px 0;">
-                <div class="overview-context-card">
-                    <div class="overview-context-chip">Overview &amp; Context</div>
 
-                    <h2 class="overview-context-headline serif" style="margin-bottom: 1.5rem;">
-                        A food-order-form builder that lives inside the chat, not next to it.
-                    </h2>
-
-                    <div class="problem-body" style="margin-bottom: 3rem;">
-                        <p>Neartail is a tool for businesses whose menus change weekly: meal-prep services, office canteens, bakeries, caterers. You describe your menu, set prices, and Neartail builds an order form that calculates totals automatically and pipes responses to Google Sheets.</p>
-                        <p>The bet behind the ChatGPT App version: most Neartail users already type the words &ldquo;I need a form for&hellip;&rdquo; into ChatGPT. So the form should appear right there. No new tab. No new login. No new tool to learn.</p>
-                    </div>
-
-                    <div class="overview-meta-grid" style="margin-bottom: 0;">
-                        <div class="overview-meta-item">
-                            <div class="overview-meta-label">PRODUCT</div>
-                            <div class="overview-meta-value">ChatGPT App &middot; in-chat widget &amp; flow</div>
-                        </div>
-                        <div class="overview-meta-item">
-                            <div class="overview-meta-label">SKILLS</div>
-                            <div class="overview-meta-value">UX strategy, in-surface UI design, design-system fit, marketing/explainer visuals</div>
-                        </div>
-                        <div class="overview-meta-item">
-                            <div class="overview-meta-label">TIMELINE</div>
-                            <div class="overview-meta-value">Dec 12, 2025 &ndash; Apr 23, 2026 &middot; live on ChatGPT Apps</div>
-                        </div>
-                        <div class="overview-meta-item">
-                            <div class="overview-meta-label">TEAM</div>
-                            <div class="overview-meta-value">Solo designer, Neartail founder, co-founder, 1 developer</div>
-                        </div>
-                    </div>
-
-                </div>
-            </section>
-
-            <hr class="case-section-divider">
 
             <!-- Problem -->
             <section id="problem" class="problem-section" style="padding: 64px 0; margin-bottom: 56px;">
@@ -181,11 +157,10 @@
 
                     <div class="problem-body">
                         <p>Every web pattern Neartail's main product relies on left sidebar, full-page editor, modal previews, sticky publish bar doesn't exist on this surface. A standalone product has a whole interface to work with. A ChatGPT App has a message bubble.</p>
-                        <p>Out of those, one rule mattered more than the rest. It became the north-star for every decision that followed:</p>
                     </div>
 
                     <div class="case-note-card" style="margin-top: 56px;">
-                        <div class="case-note-label">Target</div>
+                        <div class="case-note-label">The north star.</div>
                         <p class="case-note-body">Create here. Edit here. Publish here. Nowhere else. If a user has to click out to the Neartail web app to fix a typo, the whole reason for being on ChatGPT collapses. Every UX decision in this project is downstream of that one rule.</p>
                     </div>
                 </div>
@@ -193,50 +168,18 @@
 
             <hr class="case-section-divider">
 
-            <!-- My Role -->
-            <section id="my-role" class="my-role-section" style="padding: 64px 0; margin-bottom: 56px;">
-                <div>
-                    <div class="overview-context-chip">My Role</div>
 
-                    <h2 class="problem-headline serif">Solo designer. End-to-end. Every pixel that touches the user.</h2>
-
-                    <div class="problem-body" style="margin-bottom: 2.5rem;">
-                        <p>I was the only designer on the ChatGPT App project. I owned the strategy translation, the in-chat widget UI, the create/edit/publish flow, and the marketing/explainer images that ship with the app listing.</p>
-                        <p>The Neartail team, founder, co-founder, and one developer owned product strategy, content briefs for the explainer images, and the engineering build. My job was to translate their product vision and OpenAI's design rules into a single coherent experience that could pass review and feel native to ChatGPT.</p>
-                    </div>
-
-                    <div class="sprint-plan-grid" style="grid-template-columns: repeat(3, 1fr);">
-                        <div class="sprint-day-card">
-                            <div class="sprint-day-label">OWNED</div>
-                            <div class="sprint-day-title">UX strategy &amp; flow</div>
-                            <p class="sprint-day-text">The Create &rarr; Edit &rarr; Publish loop, the in-chat interaction model, and the decisions about what stays in the widget vs. what goes inline as text.</p>
-                        </div>
-                        <div class="sprint-day-card">
-                            <div class="sprint-day-label">OWNED</div>
-                            <div class="sprint-day-title">In-chat widget UI</div>
-                            <p class="sprint-day-text">The visual design of the widget that renders inside ChatGPT typography, spacing, density, component patterns, and the form-feel that signals &ldquo;this is editable.&rdquo;</p>
-                        </div>
-                        <div class="sprint-day-card">
-                            <div class="sprint-day-label">ME &amp; PEERS</div>
-                            <div class="sprint-day-title">Explainer images</div>
-                            <p class="sprint-day-text">The marketing &amp; onboarding visuals for the ChatGPT App listing designed against content briefs from the Neartail founder, co-founder, and developer.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <hr class="case-section-divider">
 
             <!-- Designing Under OpenAI's Rules -->
             <section id="designing-under-openai-rules" class="delivering-poc-section" style="padding: 64px 0; margin-bottom: 56px;">
                 <div>
                     <div class="overview-context-chip">Designing Under OpenAI's Rules</div>
 
-                    <h2 class="problem-headline serif">Three principles. Every screen had to answer to all three.</h2>
+                    <h2 class="problem-headline serif">Reading the rulebook, not interviewing users.</h2>
 
                     <div class="problem-body" style="margin-bottom: 3rem;">
-                        <p>The discovery work for this project wasn't user interviews, it was reading OpenAI's Apps SDK documentation end-to-end, multiple passes, translating each line into a concrete design rule. Plus a competitor scan of live ChatGPT Apps and brainstorming sessions with the Neartail team and design peers.</p>
-                        <p>OpenAI's published UX principles aren't loose suggestions they're a coherent philosophy: your app is a guest inside ChatGPT, not a destination. Three of them did the heavy lifting on this project.</p>
+                        <p>Discovery on this project wasn't user interviews it was reading OpenAI's Apps SDK documentation end-to-end, multiple passes, translating each line into a concrete design rule. Plus a competitor scan of live ChatGPT Apps and brainstorming with the Neartail team.</p>
+                        <p>OpenAI's published UX principles aren't loose suggestions they're a coherent philosophy: your app is a guest inside ChatGPT, not a destination. Three principles did the heavy lifting.</p>
                     </div>
 
                     <div style="display: flex; flex-direction: column; gap: 32px;">
@@ -245,29 +188,24 @@
                             <div style="font-size: clamp(10px, 1vw, 12px); font-weight: 600; letter-spacing: 1.5px; color: #0F8A7E; text-transform: uppercase; font-family: var(--font-sans); margin-bottom: 12px;">Conversational, not destinational</div>
                             <h3 class="serif" style="font-size: clamp(22px, 2.2vw, 28px); line-height: 1.25; color: var(--text-primary); margin: 0 0 20px; font-weight: 400;">The chat is the surface, not a doorway to one.</h3>
                             <p style="font-style: italic; color: #475569; font-size: clamp(14px, 1.6vw, 18px); line-height: 1.6; margin: 0 0 20px; padding-left: 16px; border-left: 5px solid #0F8A7E; border-radius: 4px;">Apps should embed the entire create-edit-share loop inside the conversation. Don't bounce users to an external product to finish the job.</p>
-                            <p style="color: var(--text-secondary); font-size: clamp(14px, 1.6vw, 18px); line-height: 1.7; margin: 0 0 20px;">What it forced me to design: Edit and Publish had to live <em>inside</em> the widget. The first two designs I sketched both included an &ldquo;Open in Neartail&rdquo; link both got cut. The final widget keeps every action in-chat: tap an item to edit, tap Publish to ship, get the shareable link as the next message in the conversation. The user never opens a tab.</p>
+                            <p style="color: var(--text-secondary); font-size: clamp(14px, 1.6vw, 18px); line-height: 1.7; margin: 0;"><strong>What it forced.</strong> Edit and Publish had to live inside the widget. The first two designs I sketched both included an "Open in Neartail" link both got cut. The final widget keeps every action in-chat: tap an item to edit, tap Publish to ship, get the shareable link as the next message in the conversation. The user never opens a tab.</p>
                         </div>
 
                         <!-- Principle 02 -->
                         <div style="background: #D3EBE8; border-radius: 24px; padding: 32px;">
                             <div style="font-size: clamp(10px, 1vw, 12px); font-weight: 600; letter-spacing: 1.5px; color: #0F8A7E; text-transform: uppercase; font-family: var(--font-sans); margin-bottom: 12px;">Render-first, not text-first</div>
                             <h3 class="serif" style="font-size: clamp(22px, 2.2vw, 28px); line-height: 1.25; color: var(--text-primary); margin: 0 0 20px; font-weight: 400;">Show the form. Don't describe it.</h3>
-                            <p style="font-style: italic; color: #475569; font-size: clamp(14px, 1.6vw, 18px); line-height: 1.6; margin: 0 0 20px; padding-left: 16px; border-left: 5px solid #0F8A7E; border-radius: 4px;">When the app has something visual to deliver a form, a card, a list render the actual UI inline. The widget is the answer, not a preview of the answer.</p>
-                            <p style="color: var(--text-secondary); font-size: clamp(14px, 1.6vw, 18px); line-height: 1.7; margin: 0 0 20px;">What it forced me to design: The widget had to <em>look</em> like a real form, not a summary card with a button to view a real form. I designed it with the visual signatures users associate with editable forms labelled rows, prices on the right, a clear primary action so a user reading the chat sees &ldquo;this is a form&rdquo; before reading a single word of the response text. Form-feel was the core design call, and the team aligned on it the moment we saw the first mock.</p>
+                            <p style="font-style: italic; color: #475569; font-size: clamp(14px, 1.6vw, 18px); line-height: 1.6; margin: 0 0 20px; padding-left: 16px; border-left: 5px solid #0F8A7E; border-radius: 4px;">When the app has something visual to deliver, render the actual UI inline. The widget is the answer, not a preview of one.</p>
+                            <p style="color: var(--text-secondary); font-size: clamp(14px, 1.6vw, 18px); line-height: 1.7; margin: 0;"><strong>What it forced.</strong> The widget had to look like a real form, not a summary card with a button to view a real form. I designed it with the visual signatures users associate with editable forms labelled rows, prices on the right, a clear primary action so a user reading the chat sees "this is a form" before reading a single word of response text. Form-feel was the core design call. The team aligned on it the moment we saw the first mock.</p>
                         </div>
 
                         <!-- Principle 03 -->
                         <div style="background: #D3EBE8; border-radius: 24px; padding: 32px;">
                             <div style="font-size: clamp(10px, 1vw, 12px); font-weight: 600; letter-spacing: 1.5px; color: #0F8A7E; text-transform: uppercase; font-family: var(--font-sans); margin-bottom: 12px;">Respect the surface</div>
                             <h3 class="serif" style="font-size: clamp(22px, 2.2vw, 28px); line-height: 1.25; color: var(--text-primary); margin: 0 0 20px; font-weight: 400;">Fit ChatGPT. Don't fight it.</h3>
-                            <p style="font-style: italic; color: #475569; font-size: clamp(14px, 1.6vw, 18px); line-height: 1.6; margin: 0 0 20px; padding-left: 16px; border-left: 5px solid #0F8A7E; border-radius: 4px;">Work within ChatGPT's narrow width, no-modal, no-persistent-state constraints. Don't import your product's full UI design for the surface you're in.</p>
-                            <p style="color: var(--text-secondary); font-size: clamp(14px, 1.6vw, 18px); line-height: 1.7; margin: 0 0 20px;">What it forced me to design: Typography and spacing scaled down without becoming cramped. I matched ChatGPT's information density a font hierarchy that reads at chat-bubble width, padding tuned for mobile-first viewports, no floating panels. Neartail's brand stays present (mint accents, the form-row pattern) but the chrome is ChatGPT-native. The widget doesn't shout &ldquo;I'm a different app&rdquo;, it whispers &ldquo;I belong here.&rdquo;</p>
+                            <p style="font-style: italic; color: #475569; font-size: clamp(14px, 1.6vw, 18px); line-height: 1.6; margin: 0 0 20px; padding-left: 16px; border-left: 5px solid #0F8A7E; border-radius: 4px;">Work within ChatGPT's narrow width, no-modal, no-persistent-state constraints. Don't import your product's full UI for the surface you're in.</p>
+                            <p style="color: var(--text-secondary); font-size: clamp(14px, 1.6vw, 18px); line-height: 1.7; margin: 0;"><strong>What it forced.</strong> Typography and spacing scaled down without becoming cramped. I matched ChatGPT's information density a font hierarchy that reads at chat-bubble width, padding tuned for mobile-first viewports, no floating panels. Neartail's brand stays present (mint accents, the form-row pattern) but the chrome is ChatGPT-native. The widget doesn't shout "I'm a different app." It whispers "I belong here."</p>
                         </div>
-                    </div>
-
-                    <div class="case-note-card" style="margin-top: 2.5rem;">
-                        <div class="case-note-label">My Note</div>
-                        <p class="case-note-body">Almost every design decision I made traces back to one of these three rules. When the team pushed for a feature that broke a principle, I had a vocabulary to explain why and a way to find a version that did fit.</p>
                     </div>
                 </div>
             </section>
@@ -279,17 +217,17 @@
                 <div>
                     <div class="overview-context-chip">The Core Widget</div>
 
-                    <h2 class="problem-headline serif">Form-feel inside a chat bubble. That's the whole UI.</h2>
+                    <h2 class="problem-headline serif">Form-feel inside a chat bubble</h2>
 
                     <div class="problem-body" style="margin-bottom: 1.5rem;">
-                        <p>The single most important UI decision was making the widget look like a form not like a summary card, not like a preview, not like a chat-styled message. A user scanning the conversation should see the widget and think &ldquo;I can edit this,&rdquo; before they've read a word.</p>
+                        <p>The single most important UI decision was making the widget look like a form not a summary card, not a preview, not a chat-styled message. A user scanning the conversation should see the widget and think "I can edit this," before they've read a word.</p>
                         <p>What that meant in practice:</p>
                     </div>
 
                     <ul style="list-style: none; padding: 0; margin: 0 0 2.5rem; display: flex; flex-direction: column; gap: 1rem;">
                         <li style="display: flex; gap: 0.75rem; color: #1A1A1A; font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
                             <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
-                            <span>Labelled rows with right-aligned values the visual signature of an editable list. Same pattern as Google Forms, Notion databases, any tool where rows mean &ldquo;items I can change.&rdquo;</span>
+                            <span>Labelled rows with right-aligned values, the visual signature of an editable list. Same pattern as Google Forms, Notion databases, any tool where rows mean "items I can change."</span>
                         </li>
                         <li style="display: flex; gap: 0.75rem; color: #1A1A1A; font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
                             <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
@@ -297,11 +235,11 @@
                         </li>
                         <li style="display: flex; gap: 0.75rem; color: #1A1A1A; font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
                             <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
-                            <span>Mono labels, serif title typographic contrast that reads as &ldquo;this is structured data,&rdquo; not &ldquo;this is prose.&rdquo;</span>
+                            <span>Mono labels, serif title typographic contrast that reads as "this is structured data," not "this is prose."</span>
                         </li>
                         <li style="display: flex; gap: 0.75rem; color: #1A1A1A; font-size: clamp(14px, 1.4vw, 18px); line-height: 1.7;">
                             <i data-lucide="chevron-right" style="width: 18px; height: 18px; flex-shrink: 0; margin-top: 5px;"></i>
-                            <span>Two clear actions Edit and Publish. Nothing else competes. Every other interaction (delete a row, change a price) lives inside Edit, not next to it.</span>
+                            <span>Two clear actions, Edit and Publish. Nothing else competes. Every other interaction (delete a row, change a price) lives inside Edit, not next to it.</span>
                         </li>
                     </ul>
 
