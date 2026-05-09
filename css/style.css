@@ -947,11 +947,11 @@ footer::before {
 @media (max-width: 374px) {
     .navbar { padding: 16px 16px; }
     main { padding: 0 16px; }
-    .greeting { font-size: 1.25rem; }
-    .title { font-size: 1.5rem; gap: 0.25rem; }
-    .avatar-badge { width: 64px; height: 64px; }
-    .subtitle { font-size: 1.5rem; margin-bottom: 1rem; }
-    .description { font-size: 0.9rem; }
+    .greeting { font-size: 1.35rem; }
+    .title { font-size: 1.85rem; gap: 0.25rem; }
+    .avatar-badge { width: 76px; height: 76px; }
+    .subtitle { font-size: 1.85rem; margin-bottom: 1rem; }
+    .description { font-size: 1rem; }
     .hero { height: auto; min-height: 100dvh; padding: 100px 0 60px; gap: 1rem; }
     .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; }
     .work { padding: 48px 0; }
@@ -978,11 +978,11 @@ footer::before {
 @media (min-width: 375px) and (max-width: 575px) {
     .navbar { padding: 16px 20px; }
     main { padding: 0 20px; }
-    .greeting { font-size: 1.35rem; }
-    .title { font-size: 1.75rem; }
-    .avatar-badge { width: 72px; height: 72px; }
-    .subtitle { font-size: 1.75rem; margin-bottom: 1.25rem; }
-    .description { font-size: 0.95rem; }
+    .greeting { font-size: 1.5rem; }
+    .title { font-size: 2.15rem; }
+    .avatar-badge { width: 84px; height: 84px; }
+    .subtitle { font-size: 2.15rem; margin-bottom: 1.25rem; }
+    .description { font-size: 1.05rem; }
     .hero { height: auto; min-height: 100dvh; padding: 100px 0 60px; gap: 1rem; }
     .section-title { font-size: 2rem; margin-bottom: 1.5rem; }
     .work { padding: 56px 0; }
@@ -1031,6 +1031,13 @@ footer::before {
         row-gap: 0;
         column-gap: 0.5rem;
         line-height: 1.1;
+    }
+}
+
+/* Maintain exact subtitle line-height spacing below 796px */
+@media (max-width: 795px) {
+    .subtitle {
+        margin-top: 1em; /* Ensures the gap visually matches the line height */
     }
 }
 
