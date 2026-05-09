@@ -1037,7 +1037,7 @@ footer::before {
 /* Maintain exact subtitle line-height spacing below 796px */
 @media (max-width: 795px) {
     .subtitle {
-        margin-top: 1em; /* Ensures the gap visually matches the line height */
+        margin-top: 6px;
     }
 }
 
