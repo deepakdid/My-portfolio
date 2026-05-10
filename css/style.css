@@ -5,28 +5,28 @@
     src: url('../assets/fonts/Inter/Inter-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Inter';
     src: url('../assets/fonts/Inter/Inter-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Inter';
     src: url('../assets/fonts/Inter/Inter-SemiBold.ttf') format('truetype');
     font-weight: 600;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Inter';
     src: url('../assets/fonts/Inter/Inter-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 /* Awesome Serif VAR */
@@ -35,49 +35,49 @@
     src: url('../assets/fonts/Awesome%20Serif%20VAR/AwesomeSerif-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Awesome Serif VAR';
     src: url('../assets/fonts/Awesome%20Serif%20VAR/AwesomeSerif-MediumRegular.otf') format('opentype');
     font-weight: 500;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Awesome Serif VAR';
     src: url('../assets/fonts/Awesome%20Serif%20VAR/AwesomeSerif-BoldRegular.otf') format('opentype');
     font-weight: 700;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Awesome Serif VAR';
     src: url('../assets/fonts/Awesome%20Serif%20Italic%20VAR/AwesomeSerifItalic-Regular.otf') format('opentype');
     font-weight: 400;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Awesome Serif VAR';
     src: url('../assets/fonts/Awesome%20Serif%20Italic%20VAR/AwesomeSerifItalic-MedRegular.otf') format('opentype');
     font-weight: 500;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Awesome Serif VAR';
     src: url('../assets/fonts/Awesome%20Serif%20Italic%20VAR/AwesomeSerifItalic-BdRegular.otf') format('opentype');
     font-weight: 700;
     font-style: italic;
-    font-display: swap;
+    font-display: block;
 }
 @font-face {
     font-family: 'Havelin Signature';
     src: url('../assets/fonts/Havelin-Signature.otf') format('opentype');
     font-weight: 400;
     font-style: normal;
-    font-display: swap;
+    font-display: block;
 }
 
 :root {
@@ -158,13 +158,13 @@ body {
     position: absolute;
     inset: 0;
     z-index: -1;
-    backdrop-filter: blur(48px);
-    -webkit-backdrop-filter: blur(48px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
     mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
     -webkit-mask-image: linear-gradient(to bottom, black 30%, transparent 100%);
     pointer-events: none;
     opacity: 0;
-    transition: opacity 0.5s ease;
+    transition: opacity 0.3s ease;
 }
 
 .navbar.scrolled::after {
@@ -1106,6 +1106,8 @@ footer::before {
 
 /* Mobile Header / Menu Overlay (< 840px) */
 @media (max-width: 839px) {
+    .testimonials { padding: 64px 0; }
+
     .mobile-menu-btn {
         display: block;
     }
