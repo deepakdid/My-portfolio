@@ -140,7 +140,7 @@ const modalHtml = `
     <div class="contact-modal">
         <button class="contact-modal-close" onclick="closeContactModal()" aria-label="Close"><i data-lucide="x"></i></button>
         <h3>Let's talk</h3>
-        <p>Reach out via email or WhatsApp â€” I usually reply within a few hours.</p>
+        <p>Reach out via email or WhatsApp — I usually reply within a few hours.</p>
         
         <div class="contact-card">
             <div class="contact-label">EMAIL</div>
@@ -153,7 +153,7 @@ const modalHtml = `
         <div class="contact-card">
             <div class="contact-label">WHATSAPP</div>
             <div class="contact-info">
-                <div class="wa-number"><span class="flag-icon">ðŸ‡®ðŸ‡³</span> +91 88707 95729</div>
+                <div class="wa-number"><span class="flag-icon">🇮🇳</span> +91 88707 95729</div>
                 <a href="https://wa.me/918870795729" target="_blank" class="chat-btn">
                     <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M12.031 0C5.394 0 .013 5.38.013 12.016c0 2.12.553 4.186 1.604 6.002L.053 24l6.147-1.611a11.97 11.97 0 005.831 1.517c6.634 0 12.016-5.38 12.016-12.016S18.667 0 12.031 0zm6.54 17.202c-.279.787-1.618 1.488-2.222 1.545-.53.05-1.198.156-3.791-.918-3.136-1.299-5.188-4.542-5.344-4.75-.157-.208-1.275-1.696-1.275-3.238 0-1.542.805-2.302 1.09-2.589.284-.287.622-.358.828-.358.208 0 .416.001.597.009.188.008.439-.074.686.52.261.63.834 2.034.908 2.181.074.146.124.318.02.525-.104.208-.156.338-.312.52-.156.182-.33.407-.47.545-.156.155-.316.326-.134.64.182.313.808 1.336 1.737 2.164 1.206 1.838 1.487 2.02 1.774.182.287.02.443-.075.641-.093.197-.406.47-.562.641-.156.171-.322.364-.104.737.218.373.97 1.591 2.08 2.592 1.442 1.3 2.628 1.705 3.003 1.85.375.146.595.124.819-.13.224-.254.965-1.127 1.225-1.516.26-.388.52-.325.867-.195.346.13 2.193 1.036 2.568 1.225.375.188.625.281.716.436.091.155.091.902-.188 1.689z"/></svg> 
                     Chat
@@ -162,7 +162,7 @@ const modalHtml = `
         </div>
     </div>
 </div>
-\`;
+`;
 document.body.insertAdjacentHTML('beforeend', modalHtml);
 if(window.lucide) { lucide.createIcons(); }
 
