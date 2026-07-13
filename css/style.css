@@ -152,7 +152,7 @@ body {
     transition: opacity 0.4s ease;
 }
 
-/* Progressive blur layer — hidden by default, fades in on scroll */
+/* Progressive blur layer â€” hidden by default, fades in on scroll */
 .navbar::after {
     content: "";
     position: absolute;
@@ -240,7 +240,7 @@ body {
     gap: 14px;
     padding: clamp(0.5rem, 0.75vw, 0.75rem) clamp(1rem, 1.5vw, 1.5rem);
     border: 1px solid var(--text-primary);
-    border-radius: 20px;
+    border-radius: 100px;
     text-decoration: none;
     color: #fff;
     font-size: clamp(13px, 1.2vw, 16px);
@@ -251,28 +251,7 @@ body {
 
 
 
-.status-dot {
-    width: 8px;
-    height: 8px;
-    background-color: #22c55e;
-    border-radius: 50%;
-    position: relative;
-}
 
-.status-dot::after {
-    content: '';
-    position: absolute;
-    top: -4px;
-    left: -4px;
-    right: -4px;
-    bottom: -4px;
-    border: 2px solid #22c55e;
-    border-radius: 50%;
-    animation: blink-pulse 2s infinite cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-@keyframes blink-pulse {
-    0% { transform: scale(0.5); opacity: 0; }
     30% { opacity: 1; }
     100% { transform: scale(2); opacity: 0; }
 }
@@ -644,7 +623,7 @@ main {
     display: block;
 }
 
-/* White frame — stays static, never moves, no shadow */
+/* White frame â€” stays static, never moves, no shadow */
 .about-photo-inner {
     background: #ffffff;
     border-radius: 1.25rem;
@@ -653,7 +632,7 @@ main {
     box-shadow: none;
 }
 
-/* Image — fills frame, interacts on hover */
+/* Image â€” fills frame, interacts on hover */
 .about-photo-inner img {
     width: 100%;
     aspect-ratio: 3 / 4;
@@ -688,7 +667,7 @@ main {
     pointer-events: none;
 }
 
-/* "About Me." text — appears AFTER arrow draws */
+/* "About Me." text â€” appears AFTER arrow draws */
 .about-label-text {
     font-family: 'Havelin Signature', 'Awesome Serif VAR', 'Instrument Serif', serif;
     font-style: normal;
@@ -712,7 +691,7 @@ main {
                 transform 0.3s cubic-bezier(0.25, 1, 0.5, 1) 0.4s;
 }
 
-/* Arrow — smooth horizontal wipe animation */
+/* Arrow â€” smooth horizontal wipe animation */
 .about-arrow {
     width: 200px;
     height: auto;
@@ -754,7 +733,7 @@ main {
     gap: 0.5rem;
     padding: clamp(0.5rem, 0.75vw, 0.75rem) clamp(1rem, 1.5vw, 1.5rem);
     border: 1px solid var(--text-primary);
-    border-radius: 20px;
+    border-radius: 100px;
     text-decoration: none;
     color: var(--text-primary);
     font-weight: 500;
@@ -775,7 +754,7 @@ main {
     gap: 0.5rem;
     padding: clamp(0.5rem, 0.75vw, 0.75rem) clamp(1rem, 1.5vw, 1.5rem);
     border: 1px solid var(--text-primary);
-    border-radius: 20px;
+    border-radius: 100px;
     text-decoration: none;
     color: #fff;
     background: var(--text-primary);
@@ -943,7 +922,7 @@ footer::before {
 
 /* ===== Responsive ===== */
 
-/* xs — below 375px */
+/* xs â€” below 375px */
 @media (max-width: 374px) {
     .navbar { padding: 16px 16px; }
     main { padding: 0 16px; }
@@ -974,7 +953,7 @@ footer::before {
     .logo-text { font-size: 1.1rem; }
 }
 
-/* sm — 375px to 575px */
+/* sm â€” 375px to 575px */
 @media (min-width: 375px) and (max-width: 575px) {
     .navbar { padding: 16px 20px; }
     main { padding: 0 20px; }
@@ -1002,7 +981,7 @@ footer::before {
     .nav-links a { font-size: 0.9rem; }
 }
 
-/* md — 576px to 767px */
+/* md â€” 576px to 767px */
 @media (min-width: 576px) and (max-width: 767px) {
     .navbar { padding: 20px 32px; }
     main { padding: 0 32px; }
@@ -1041,7 +1020,7 @@ footer::before {
     }
 }
 
-/* lg — 768px to 991px */
+/* lg â€” 768px to 991px */
 @media (min-width: 768px) and (max-width: 991px) {
     .navbar { padding: 22px 48px; }
     main { padding: 0 48px; }
@@ -1063,7 +1042,7 @@ footer::before {
     .nav-links a { font-size: 1rem; }
 }
 
-/* xl — 992px to 1279px */
+/* xl â€” 992px to 1279px */
 @media (min-width: 992px) and (max-width: 1279px) {
     .navbar { padding: 24px 56px; }
     main { padding: 0 72px; }
@@ -1080,7 +1059,7 @@ footer::before {
     footer { padding: 24px 56px; }
 }
 
-/* xxl — 1280px to 1439px */
+/* xxl â€” 1280px to 1439px */
 @media (min-width: 1280px) and (max-width: 1439px) {
     .navbar { padding: 24px 64px; }
     main { padding: 0 140px; }
@@ -1092,7 +1071,7 @@ footer::before {
     footer { padding: 24px 64px; }
 }
 
-/* xxxl — 1440px+ (desktop max, content capped at 1680px) */
+/* xxxl â€” 1440px+ (desktop max, content capped at 1680px) */
 @media (min-width: 1440px) {
     .navbar { padding: 24px 86px; }
     main { padding: 0 106px; }
@@ -1346,4 +1325,179 @@ footer::before {
 @keyframes footer-marquee-scroll {
     from { transform: translate3d(0, 0, 0); }
     to { transform: translate3d(-50%, 0, 0); }
+}
+
+
+/* Contact Modal */
+.contact-modal-overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.contact-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.contact-modal {
+    background: #fff;
+    width: 90%;
+    max-width: 440px;
+    border-radius: 24px;
+    padding: 32px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+    position: relative;
+    transform: translateY(20px);
+    transition: transform 0.3s ease;
+    font-family: var(--font-sans);
+}
+
+.contact-modal-overlay.active .contact-modal {
+    transform: translateY(0);
+}
+
+.contact-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f5f5f5;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    color: var(--text-primary);
+    transition: background 0.2s;
+}
+
+.contact-modal-close:hover {
+    background: #e0e0e0;
+}
+
+.contact-modal-close i {
+    width: 16px;
+    height: 16px;
+}
+
+.contact-modal h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.contact-modal p {
+    font-size: 14px;
+    color: var(--text-secondary);
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.contact-card {
+    background: #fff;
+    border: 1px solid #eaeaea;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.02);
+}
+
+.contact-label {
+    font-size: 11px;
+    color: #888;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.contact-info > span {
+    font-size: 15px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.copy-btn {
+    background: #f5f5f5;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s;
+}
+
+.copy-btn i {
+    width: 14px;
+    height: 14px;
+}
+
+.copy-btn:hover {
+    background: #e0e0e0;
+}
+
+.copy-btn.copied {
+    background: #e8f5e9;
+    color: #2e7d32;
+}
+
+.wa-number {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--text-primary);
+}
+
+.flag-icon {
+    font-size: 18px;
+    line-height: 1;
+}
+
+.chat-btn {
+    background: #111;
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 100px;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: background 0.2s;
+}
+
+.chat-btn svg {
+    width: 14px;
+    height: 14px;
+}
+
+.chat-btn:hover {
+    background: #333;
 }
