@@ -1391,8 +1391,8 @@ footer::before {
 }
 
 .contact-modal h3 {
-    font-size: 24px;
-    font-weight: 600;
+    font-size: 28px;
+    font-weight: bold;
     margin-bottom: 12px;
     color: var(--text-primary);
 }
