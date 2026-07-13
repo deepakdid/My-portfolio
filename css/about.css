@@ -89,7 +89,7 @@
 
 .btn-small {
     padding: clamp(0.5rem, 0.75vw, 0.75rem) clamp(1rem, 1.5vw, 1.5rem);
-    border-radius: 20px;
+    border-radius: 100px;
     font-size: 14px;
 }
 

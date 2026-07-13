@@ -135,7 +135,7 @@ if (factsMarquee) {
 
 
 // Contact Modal
-const modalHtml = 
+const modalHtml = `
 <div class="contact-modal-overlay" id="contactModal">
     <div class="contact-modal">
         <button class="contact-modal-close" onclick="closeContactModal()" aria-label="Close"><i data-lucide="x"></i></button>
@@ -162,7 +162,7 @@ const modalHtml =
         </div>
     </div>
 </div>
-;
+\`;
 document.body.insertAdjacentHTML('beforeend', modalHtml);
 if(window.lucide) { lucide.createIcons(); }
 
