@@ -47,15 +47,16 @@ document.querySelectorAll('.nav-links a').forEach(link => {
     });
 });
 
-// Close mobile menu when clicking the empty background area
-const mainNav = document.getElementById('mainNav');
-if (mainNav) {
-    mainNav.addEventListener('click', (e) => {
-        if (e.target === mainNav) {
+// Close mobile menu when clicking outside the navbar
+document.addEventListener('click', (e) => {
+    if (document.body.classList.contains('menu-open')) {
+        const navbar = document.querySelector('.navbar');
+        // If click is outside the navbar entirely, close the menu
+        if (navbar && !navbar.contains(e.target)) {
             document.body.classList.remove('menu-open');
         }
-    });
-}
+    }
+});
 
 // Case study sidebar scroll tracking
 const caseSections = document.querySelectorAll('.case-content section[id]');

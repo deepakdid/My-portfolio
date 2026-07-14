@@ -1264,6 +1264,24 @@ footer::before {
         transform: translateY(0);
     }
 
+    body.menu-open {
+        overflow: hidden;
+    }
+
+    body.menu-open::after {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(239, 239, 239, 0.4);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+        z-index: 99; /* Below the navbar (100) */
+        pointer-events: auto;
+    }
+
     .nav-links {
         position: relative;
         flex-direction: column;
@@ -1299,6 +1317,10 @@ footer::before {
         font-weight: 600;
         color: #1A1A1A;
         text-align: left;
+    }
+    
+    .nav-links a.active::after {
+        display: none !important;
     }
 }
 
