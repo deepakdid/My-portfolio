@@ -310,6 +310,12 @@ body {
     gap: 1.25rem;
 }
 
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
 .hire-me-btn {
     display: inline-flex;
     align-items: center;
@@ -1167,6 +1173,35 @@ footer::before {
         display: block;
     }
     
+    .hire-me-btn {
+        max-width: 0;
+        padding-left: 0;
+        padding-right: 0;
+        border-width: 0;
+        opacity: 0;
+        overflow: hidden;
+        pointer-events: none;
+        margin-right: -14px; /* offset the gap when hidden */
+    }
+
+    .navbar.scrolled .hire-me-btn {
+        max-width: 120px; /* enough for Let's talk */
+        padding-left: 16px;
+        padding-right: 16px;
+        border-width: 1px;
+        opacity: 1;
+        pointer-events: auto;
+        margin-right: 0;
+    }
+
+    .navbar.scrolled {
+        padding: 8px 8px 8px 20px;
+    }
+
+    .navbar.scrolled .header-actions {
+        gap: 12px;
+    }
+    
     .logo {
         position: static;
         z-index: 1001;
@@ -1174,12 +1209,6 @@ footer::before {
     }
 
     .logo-text {
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        top: 50%;
-        margin-top: 0;
-        z-index: 1001;
         font-size: 1.25rem;
     }
     
