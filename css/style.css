@@ -1441,7 +1441,7 @@ footer::before {
 .copy-btn {
     background: #f5f5f5;
     border: none;
-    padding: 8px 12px;
+    padding: 8px 16px;
     border-radius: 100px;
     font-size: 13px;
     font-weight: 500;
@@ -1449,6 +1449,7 @@ footer::before {
     cursor: pointer;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     transition: all 0.2s;
 }
@@ -1491,6 +1492,7 @@ footer::before {
     font-weight: 500;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 6px;
     transition: background 0.2s;
 }
@@ -1513,14 +1515,15 @@ footer::before {
         padding: 12px;
     }
     .contact-info > span {
-        font-size: 14px;
-        letter-spacing: -0.2px;
+        font-size: 16px;
+        letter-spacing: -0.4px;
     }
     .wa-number {
-        font-size: 14px;
+        font-size: 16px;
+        letter-spacing: -0.4px;
     }
-    .copy-btn {
-        padding: 6px 10px;
-        font-size: 13px;
+    .copy-btn, .chat-btn {
+        padding: 6px 12px;
+        font-size: 12px;
     }
 }
