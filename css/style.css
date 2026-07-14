@@ -1509,7 +1509,11 @@ footer::before {
 @media (max-width: 480px) {
     .contact-modal {
         width: 95%;
-        padding: 24px 16px;
+        padding: 24px 20px 20px;
+    }
+    .contact-modal-close {
+        top: 16px;
+        right: 16px;
     }
     .contact-card {
         padding: 12px;
