@@ -1174,24 +1174,20 @@ footer::before {
     }
     
     .hire-me-btn {
-        max-width: 0;
-        padding-left: 0;
-        padding-right: 0;
-        border-width: 0;
+        padding: 8px 16px;
+        font-size: 14px;
+        border: 1px solid transparent;
         opacity: 0;
-        overflow: hidden;
         pointer-events: none;
-        margin-right: -14px; /* offset the gap when hidden */
+        transform: translateX(10px) scale(0.95);
+        transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
     }
 
     .navbar.scrolled .hire-me-btn {
-        max-width: 120px; /* enough for Let's talk */
-        padding: 8px 16px;
-        font-size: 14px;
-        border-width: 1px;
         opacity: 1;
         pointer-events: auto;
-        margin-right: 0;
+        transform: translateX(0) scale(1);
+        border-color: var(--text-primary);
     }
 
     .navbar.scrolled {
@@ -1199,7 +1195,7 @@ footer::before {
         padding: 10px 16px 10px 24px;
     }
 
-    .navbar.scrolled .header-actions {
+    .header-actions {
         gap: 12px;
     }
     

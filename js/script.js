@@ -21,7 +21,7 @@ let ticking = false;
 window.addEventListener('scroll', () => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
-            if (window.scrollY > 20) {
+            if (window.scrollY > 20 && !document.body.classList.contains('menu-open')) {
                 navbar.classList.add('scrolled');
             } else {
                 navbar.classList.remove('scrolled');
@@ -37,6 +37,11 @@ const mobileMenuBtn = document.getElementById('mobileMenuBtn');
 if (mobileMenuBtn) {
     mobileMenuBtn.addEventListener('click', () => {
         document.body.classList.toggle('menu-open');
+        if (document.body.classList.contains('menu-open')) {
+            navbar.classList.remove('scrolled');
+        } else if (window.scrollY > 20) {
+            navbar.classList.add('scrolled');
+        }
     });
 }
 
@@ -44,6 +49,7 @@ if (mobileMenuBtn) {
 document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
         document.body.classList.remove('menu-open');
+        if (window.scrollY > 20) navbar.classList.add('scrolled');
     });
 });
 
@@ -53,6 +59,7 @@ if (mainNav) {
     mainNav.addEventListener('click', (e) => {
         if (e.target === mainNav) {
             document.body.classList.remove('menu-open');
+            if (window.scrollY > 20) navbar.classList.add('scrolled');
         }
     });
 }
