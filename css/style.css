@@ -176,7 +176,7 @@ body {
 
 .navbar.scrolled {
     top: 24px;
-    max-width: 540px;
+    max-width: 600px;
     padding: 8px 8px 8px 24px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 100px;
@@ -302,6 +302,8 @@ body {
     font-weight: 500;
     transition: all 0.3s ease;
     background: var(--text-primary);
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 
