@@ -1430,12 +1430,15 @@ footer::before {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
 }
 
 .contact-info > span {
     font-size: 17px;
     color: var(--text-primary);
     font-weight: 500;
+    word-break: break-all;
 }
 
 .copy-btn {
