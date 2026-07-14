@@ -141,6 +141,9 @@ body {
     border: 1px solid rgba(255, 255, 255, 0);
     border-radius: 100px;
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+    /* Prevent backdrop-filter flash */
+    backdrop-filter: blur(0px);
+    -webkit-backdrop-filter: blur(0px);
 }
 
 /* Default state: gradient overlay only, no blur */
@@ -173,7 +176,7 @@ body {
 
 .navbar.scrolled {
     top: 24px;
-    width: max-content;
+    max-width: 540px;
     padding: 8px 8px 8px 24px;
     background: rgba(255, 255, 255, 0.7);
     border-radius: 100px;
@@ -181,7 +184,6 @@ body {
     -webkit-backdrop-filter: blur(16px);
     box-shadow: 0 10px 40px rgba(0,0,0,0.08);
     border: 1px solid rgba(255, 255, 255, 0.5);
-    gap: 32px;
 }
 
 .navbar.scrolled::before,
@@ -255,7 +257,7 @@ body {
     top: 50%;
     left: 0;
     height: calc(100% - 0.5rem);
-    background: #ffffff;
+    background: var(--nav-hover-bg, #ffffff);
     border-radius: 100px;
     box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     opacity: 0;
