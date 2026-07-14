@@ -138,6 +138,8 @@ body {
     padding: 24px 86px;
     z-index: 100;
     box-sizing: border-box;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 100px;
     transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
 }
 
