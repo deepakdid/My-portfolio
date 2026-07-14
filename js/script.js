@@ -218,3 +218,36 @@ if (navLinksContainer && navHoverBg) {
         navHoverBg.style.opacity = '0';
     });
 }
+
+// Main Navigation Scroll Spy
+const mainNavLinks = document.querySelectorAll('.nav-links a');
+const pageSections = document.querySelectorAll('section[id]');
+
+// Set active based on current page if we are on a separate page like about.html
+const currentPath = window.location.pathname.split('/').pop();
+if (currentPath === 'about.html') {
+    mainNavLinks.forEach(link => {
+        if (link.getAttribute('href').includes('about.html')) {
+            link.classList.add('active');
+        }
+    });
+} else {
+    // We are on index.html, use scroll spy
+    const navObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const id = entry.target.getAttribute('id');
+                const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`) || document.querySelector(`.nav-links a[href="index.html#${id}"]`);
+                
+                if (activeLink) {
+                    mainNavLinks.forEach(link => link.classList.remove('active'));
+                    activeLink.classList.add('active');
+                }
+            }
+        });
+    }, { rootMargin: '-30% 0px -70% 0px' });
+
+    pageSections.forEach(section => {
+        navObserver.observe(section);
+    });
+}
