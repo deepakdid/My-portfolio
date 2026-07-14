@@ -146,6 +146,18 @@ body {
     -webkit-backdrop-filter: blur(0px);
 }
 
+.navbar .logo {
+    order: 1;
+}
+
+.navbar .main-nav {
+    order: 2;
+}
+
+.navbar .header-actions {
+    order: 3;
+}
+
 /* Default state: gradient overlay only, no blur */
 .navbar::before {
     content: "";
