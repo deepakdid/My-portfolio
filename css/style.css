@@ -1506,16 +1506,21 @@ footer::before {
 
 @media (max-width: 480px) {
     .contact-modal {
-        padding: 24px 20px;
+        width: 95%;
+        padding: 24px 16px;
+    }
+    .contact-card {
+        padding: 12px;
     }
     .contact-info > span {
-        font-size: 12px;
+        font-size: 14px;
+        letter-spacing: -0.2px;
     }
     .wa-number {
-        font-size: 13px;
+        font-size: 14px;
     }
     .copy-btn {
         padding: 6px 10px;
-        font-size: 12px;
+        font-size: 13px;
     }
 }
