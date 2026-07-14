@@ -195,3 +195,26 @@ window.copyEmail = function(btn) {
         }, 2000);
     });
 }
+
+// Sliding hover effect for nav links
+const navLinksContainer = document.getElementById('navLinks');
+const navHoverBg = document.getElementById('navHoverBg');
+
+if (navLinksContainer && navHoverBg) {
+    const links = navLinksContainer.querySelectorAll('a');
+    
+    links.forEach(link => {
+        link.addEventListener('mouseenter', (e) => {
+            const linkRect = link.getBoundingClientRect();
+            const containerRect = navLinksContainer.getBoundingClientRect();
+            
+            navHoverBg.style.width = `${linkRect.width}px`;
+            navHoverBg.style.left = `${linkRect.left - containerRect.left}px`;
+            navHoverBg.style.opacity = '1';
+        });
+    });
+    
+    navLinksContainer.addEventListener('mouseleave', () => {
+        navHoverBg.style.opacity = '0';
+    });
+}
