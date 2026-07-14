@@ -1241,6 +1241,13 @@ footer::before {
         pointer-events: auto;
     }
 
+    body.menu-open .navbar {
+        transform: none !important;
+        left: 0 !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
+    }
+
     body.menu-open {
         overflow: hidden;
     }
