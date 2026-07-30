@@ -265,46 +265,33 @@ if (avatarBadge) {
         const originX = (rect.left + rect.width / 2) / window.innerWidth;
         const originY = (rect.top + rect.height / 2) / window.innerHeight;
 
-        const colors = ['#FF1493', '#00BFFF', '#32CD32', '#FF8C00', '#FFD700', '#FF69B4', '#8A2BE2'];
+        // Pastel colors only
+        const pastelColors = ['#FFB3BA', '#FFDFBA', '#FFFFBA', '#BAFFC9', '#BAE1FF', '#E8B3FF'];
         
-        // Add custom shapes if supported, else fallback to standard
-        let customShapes = ['square', 'circle'];
+        let customShapes = ['square'];
         if (typeof confetti.shapeFromPath === 'function') {
-            // Squiggly line shape
-            const squiggly = confetti.shapeFromPath({ path: 'M -15 0 Q -7 -15 0 0 T 15 0', matrix: [1, 0, 0, 1, 0, 0] });
+            // Spring/squiggly line shape (made a bit longer and more curvy)
+            const squiggly = confetti.shapeFromPath({ path: 'M -20 0 Q -10 -25 0 0 T 20 0 T 40 0', matrix: [0.8, 0, 0, 0.8, -10, 0] });
+            const squiggly2 = confetti.shapeFromPath({ path: 'M -15 0 C -5 -20 5 -20 15 0 C 25 20 35 20 45 0', matrix: [0.8, 0, 0, 0.8, -15, 0] });
             // Rectangle shape
-            const rectangle = confetti.shapeFromPath({ path: 'M -20 -5 L 20 -5 L 20 5 L -20 5 Z', matrix: [1, 0, 0, 1, 0, 0] });
-            customShapes.push(squiggly, rectangle);
+            const rectangle = confetti.shapeFromPath({ path: 'M -25 -8 L 25 -8 L 25 8 L -25 8 Z', matrix: [1, 0, 0, 1, 0, 0] });
+            
+            // Add spring shapes multiple times to make them appear a lot
+            customShapes.push(squiggly, squiggly2, squiggly, rectangle, 'circle');
         }
 
-        // Blast big, minimal shapes from the center
+        // Blast huge, minimal papers that fly completely off the screen
         confetti({
-            particleCount: 25, // Minimal pieces
-            spread: 360,       // All directions
-            startVelocity: 45, 
+            particleCount: 15,       // Very minimal to avoid overlapping
+            spread: 360,             // Blast in all directions (top, bottom, left, right)
+            startVelocity: 85,       // High velocity to reach the edges of the screen
             origin: { x: originX, y: originY },
-            colors: colors,
+            colors: pastelColors,
             shapes: customShapes,
-            scalar: 3.5,       // Much bigger papers
-            ticks: 200,        // Disappear after ~3.3 seconds
-            gravity: 1,
-            decay: 0.94
+            scalar: 4.5,             // Size is even bigger
+            ticks: 1000,             // Never fade out, they will leave the screen boundaries naturally
+            gravity: 0.8,            // Enough gravity to pull them down slowly
+            decay: 0.9               // Slow decay so they hold their speed to reach edges
         });
-        
-        // A second smaller pop with even bigger shapes for depth
-        setTimeout(() => {
-            confetti({
-                particleCount: 15,
-                spread: 360,
-                startVelocity: 35,
-                origin: { x: originX, y: originY },
-                colors: colors,
-                shapes: ['square'],
-                scalar: 5,     // Massive pieces
-                ticks: 250,    // Disappear after ~4 seconds
-                gravity: 0.8,
-                decay: 0.92
-            });
-        }, 100);
     });
 }
