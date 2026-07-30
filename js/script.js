@@ -268,30 +268,33 @@ if (avatarBadge) {
         // Bold, vibrant colors (Pink, Blue, Green, Orange, Yellow)
         const vibrantColors = ['#FF3366', '#3388FF', '#44D62C', '#FF9900', '#FFD500'];
         
-        let customShapes = [];
+        let customShapes = ['square', 'circle'];
         if (typeof confetti.shapeFromPath === 'function') {
-            // Clean spring/squiggly shapes
-            const spring1 = confetti.shapeFromPath({ path: 'M -20 0 Q -10 -15 0 0 T 20 0 T 40 0', matrix: [0.8, 0, 0, 0.8, -10, 0] });
-            const spring2 = confetti.shapeFromPath({ path: 'M -15 0 C -5 -20 5 20 15 0 C 25 -20 35 20 45 0', matrix: [0.8, 0, 0, 0.8, -15, 0] });
+            // Rectangle shape
+            const rectangle = confetti.shapeFromPath({ path: 'M -25 -8 L 25 -8 L 25 8 L -25 8 Z', matrix: [1, 0, 0, 1, 0, 0] });
             
-            // Only spring shapes!
-            customShapes.push(spring1, spring2);
-        } else {
-            customShapes = ['square'];
+            // Loop shape based on user's 3rd reference image
+            const loopShape = confetti.shapeFromPath({ 
+                path: 'M -10 15 L 0 0 C 15 -20 25 0 5 10 L -15 25 L -10 30 L 10 15 C 35 -5 20 -30 0 -10 L -15 10 Z',
+                matrix: [1.5, 0, 0, 1.5, 0, 0]
+            });
+            
+            // Add custom shapes
+            customShapes.push(rectangle, loopShape, loopShape); // Added loopShape twice so it appears more often
         }
 
         // Blast huge, minimal papers that fly completely off the screen very quickly
         confetti({
-            particleCount: 15,       // Minimal to avoid overlapping
+            particleCount: 20,       // Minimal to avoid overlapping, but enough to fill screen
             spread: 360,             // Blast in all directions
-            startVelocity: 75,       // Very high velocity to shoot them out fast
+            startVelocity: 65,       // Very high velocity to shoot them out fast
             origin: { x: originX, y: originY },
             colors: vibrantColors,
             shapes: customShapes,
             scalar: 4,               // Huge shapes
-            ticks: 300,              // ~5 seconds max lifetime
-            gravity: 1.8,            // High gravity so they fall completely out of the screen fast
-            decay: 0.88              // Faster decay horizontally so they drop vertically sooner
+            ticks: 350,              // ~5 seconds max lifetime
+            gravity: 1.2,            // High gravity so they fall out of the screen fast
+            decay: 0.9               // Natural drag
         });
     });
 }
