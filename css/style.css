@@ -1025,9 +1025,9 @@ footer::before {
     .avatar-badge { width: 76px; height: 76px; }
     .subtitle { font-size: 1.85rem; margin-bottom: 1rem; }
     .description { font-size: 1rem; }
-    .hero { height: auto; min-height: 100svh; padding: 100px 0 60px; gap: 1rem; }
+    .hero { height: auto; min-height: 100svh; padding: 100px 0 56px; gap: 1rem; }
     .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; }
-    .work { padding: 48px 0; }
+    .work { padding: 64px 0; }
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
     .work-info h3 { font-size: 1.1rem; }
     .work-title-row { flex-wrap: wrap; gap: 0.5rem; }
@@ -1056,9 +1056,9 @@ footer::before {
     .avatar-badge { width: 84px; height: 84px; }
     .subtitle { font-size: 2.15rem; margin-bottom: 1.25rem; }
     .description { font-size: 1.05rem; }
-    .hero { height: auto; min-height: 100svh; padding: 100px 0 60px; gap: 1rem; }
+    .hero { height: auto; min-height: 100svh; padding: 100px 0 56px; gap: 1rem; }
     .section-title { font-size: 2rem; margin-bottom: 1.5rem; }
-    .work { padding: 56px 0; }
+    .work { padding: 64px 0; }
     .work-grid { grid-template-columns: 1fr; gap: 36px; }
     .work-info h3 { font-size: 1.2rem; }
     .testimonials-grid { grid-template-columns: 1fr; gap: 1.25rem; }
@@ -1083,7 +1083,7 @@ footer::before {
     .title { font-size: 2.25rem; }
     .avatar-badge { width: 88px; height: 88px; }
     .subtitle { font-size: 2.25rem; margin-bottom: 1.5rem; }
-    .hero { height: auto; min-height: 100svh; padding: 110px 0 60px; }
+    .hero { height: auto; min-height: 100svh; padding: 110px 0 56px; }
     .section-title { font-size: 2.5rem; }
     .work { padding: 64px 0; }
     .work-grid { grid-template-columns: 1fr; gap: 40px; }
