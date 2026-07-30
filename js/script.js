@@ -259,7 +259,21 @@ if (avatarBadge) {
     avatarBadge.style.cursor = 'pointer';
     avatarBadge.title = 'Click me!';
     
+    let clickCount = 0;
+    let resetTimeout = null;
+
     avatarBadge.addEventListener('click', () => {
+        // Prevent more than 3 clicks until papers clear
+        if (clickCount >= 3) return;
+        
+        clickCount++;
+        
+        // Reset the click count 4.5 seconds after the last allowed click
+        clearTimeout(resetTimeout);
+        resetTimeout = setTimeout(() => {
+            clickCount = 0;
+        }, 4500);
+
         // Calculate center of the avatar relative to the viewport
         const rect = avatarBadge.getBoundingClientRect();
         const originX = (rect.left + rect.width / 2) / window.innerWidth;
