@@ -1025,7 +1025,7 @@ footer::before {
     .avatar-badge { width: 76px; height: 76px; }
     .subtitle { font-size: 1.85rem; margin-bottom: 1rem; }
     .description { font-size: 1rem; }
-    .hero { height: auto; min-height: 100dvh; padding: 100px 0 60px; gap: 1rem; }
+    .hero { height: auto; padding: 100px 0 60px; gap: 1rem; }
     .section-title { font-size: 1.75rem; margin-bottom: 1.5rem; }
     .work { padding: 48px 0; }
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -1056,7 +1056,7 @@ footer::before {
     .avatar-badge { width: 84px; height: 84px; }
     .subtitle { font-size: 2.15rem; margin-bottom: 1.25rem; }
     .description { font-size: 1.05rem; }
-    .hero { height: auto; min-height: 100dvh; padding: 100px 0 60px; gap: 1rem; }
+    .hero { height: auto; padding: 100px 0 60px; gap: 1rem; }
     .section-title { font-size: 2rem; margin-bottom: 1.5rem; }
     .work { padding: 56px 0; }
     .work-grid { grid-template-columns: 1fr; gap: 36px; }
@@ -1083,7 +1083,7 @@ footer::before {
     .title { font-size: 2.25rem; }
     .avatar-badge { width: 88px; height: 88px; }
     .subtitle { font-size: 2.25rem; margin-bottom: 1.5rem; }
-    .hero { height: auto; min-height: 100dvh; padding: 110px 0 60px; }
+    .hero { height: auto; padding: 110px 0 60px; }
     .section-title { font-size: 2.5rem; }
     .work { padding: 64px 0; }
     .work-grid { grid-template-columns: 1fr; gap: 40px; }
@@ -1122,7 +1122,7 @@ footer::before {
     .title { font-size: 2.75rem; }
     .avatar-badge { width: 100px; height: 100px; }
     .subtitle { font-size: 2.75rem; }
-    .hero { height: auto; min-height: 100dvh; padding: 110px 0 80px; }
+    .hero { height: auto; padding: 110px 0 80px; }
     .section-title { font-size: 2.75rem; }
     .work { padding: 72px 0; }
     .work-grid { grid-template-columns: 1fr; gap: 32px; }
