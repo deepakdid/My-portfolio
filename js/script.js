@@ -268,22 +268,43 @@ if (avatarBadge) {
         // Bold, vibrant colors (Pink, Blue, Green, Orange, Yellow)
         const vibrantColors = ['#FF3366', '#3388FF', '#44D62C', '#FF9900', '#FFD500'];
         
-        // Remove loop shapes because they render poorly, stick to simple big shapes
-        let basicShapes = ['square', 'circle'];
+        // Multiple varied shapes!
+        let allShapes = ['square', 'circle', 'star'];
+        if (typeof confetti.shapeFromPath === 'function') {
+            const rectangle = confetti.shapeFromPath({ path: 'M -25 -10 L 25 -10 L 25 10 L -25 10 Z' });
+            const triangle = confetti.shapeFromPath({ path: 'M 0 -25 L 25 20 L -25 20 Z' });
+            const bentPaper = confetti.shapeFromPath({ path: 'M -20 10 Q 0 -15 20 10 L 15 15 Q 0 -5 -15 15 Z' });
+            allShapes.push(rectangle, triangle, bentPaper);
+        }
 
-        // Blast heavy, minimal papers (just a few) that shoot far right and drop super fast
+        // Blast 1: Fast, reaching every corner of the screen
         confetti({
-            particleCount: 5,        // Very few papers per click!
-            angle: 60,               // Shoot up and right to cross the screen
-            spread: 90,              // Spread wide enough to cover center/left too
-            startVelocity: 90,       // High velocity to reach the right side
+            particleCount: 30,       // Enough to fill the screen but remain minimal
+            spread: 360,             // Splash to every corner (left, right, top, bottom)
+            startVelocity: 85,       // Very high velocity to blast across the screen
             origin: { x: originX, y: originY },
             colors: vibrantColors,
-            shapes: basicShapes,
-            scalar: 4.5,             // Keep them huge
-            ticks: 200,              // Short lifetime, but they will leave screen due to gravity
-            gravity: 2.5,            // Very heavy, falls completely out of the screen fast!
-            decay: 0.94              // Hold speed long enough to cross screen
+            shapes: allShapes,
+            scalar: 4.5,             // Big sizes
+            ticks: 240,              // 4 seconds
+            gravity: 1.3,            // Strong gravity so they fall off the screen fast (no floating)
+            decay: 0.9               // Maintain momentum
         });
+
+        // Blast 2: Slightly delayed, massive shapes for depth
+        setTimeout(() => {
+            confetti({
+                particleCount: 15,
+                spread: 360,
+                startVelocity: 55,
+                origin: { x: originX, y: originY },
+                colors: vibrantColors,
+                shapes: allShapes,
+                scalar: 6,           // Massive sizes
+                ticks: 240,          
+                gravity: 1.5,        // Drops slightly faster
+                decay: 0.88
+            });
+        }, 100);
     });
 }
