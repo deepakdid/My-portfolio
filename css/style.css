@@ -529,8 +529,10 @@ main {
     transition: padding 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.work-card:hover .work-img-container {
-    padding: 1.5rem;
+@media (hover: hover) {
+    .work-card:hover .work-img-container {
+        padding: 1.5rem;
+    }
 }
 
 .work-img-container img {
@@ -541,8 +543,10 @@ main {
     transition: border-radius 0.4s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
-.work-card:hover .work-img-container img {
-    border-radius: 1rem;
+@media (hover: hover) {
+    .work-card:hover .work-img-container img {
+        border-radius: 1rem;
+    }
 }
 
 .work-info {
@@ -595,10 +599,12 @@ main {
     flex-shrink: 0;
 }
 
-.work-card:hover .work-link {
-    background: #1A1A1A;
-    color: #FFFFFF;
-    border-color: #1A1A1A;
+@media (hover: hover) {
+    .work-card:hover .work-link {
+        background: #1A1A1A;
+        color: #FFFFFF;
+        border-color: #1A1A1A;
+    }
 }
 
 .work-link i {
