@@ -7,7 +7,13 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
+            const navbar = document.querySelector('.navbar');
+            const navHeight = navbar ? navbar.offsetHeight : 0;
+            const extraPadding = window.innerWidth <= 768 ? 20 : 40; // Pixel-perfect padding adjustments
+            const targetPosition = target.getBoundingClientRect().top + window.scrollY - navHeight - extraPadding;
+            
+            window.scrollTo({
+                top: targetPosition,
                 behavior: 'smooth'
             });
         }
