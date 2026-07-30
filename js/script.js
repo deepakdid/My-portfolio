@@ -268,33 +268,22 @@ if (avatarBadge) {
         // Bold, vibrant colors (Pink, Blue, Green, Orange, Yellow)
         const vibrantColors = ['#FF3366', '#3388FF', '#44D62C', '#FF9900', '#FFD500'];
         
-        let customShapes = ['square', 'circle'];
-        if (typeof confetti.shapeFromPath === 'function') {
-            // Rectangle shape
-            const rectangle = confetti.shapeFromPath({ path: 'M -25 -8 L 25 -8 L 25 8 L -25 8 Z', matrix: [1, 0, 0, 1, 0, 0] });
-            
-            // Loop shape based on user's 3rd reference image
-            const loopShape = confetti.shapeFromPath({ 
-                path: 'M -10 15 L 0 0 C 15 -20 25 0 5 10 L -15 25 L -10 30 L 10 15 C 35 -5 20 -30 0 -10 L -15 10 Z',
-                matrix: [1.5, 0, 0, 1.5, 0, 0]
-            });
-            
-            // Add custom shapes
-            customShapes.push(rectangle, loopShape, loopShape); // Added loopShape twice so it appears more often
-        }
+        // Remove loop shapes because they render poorly, stick to simple big shapes
+        let basicShapes = ['square', 'circle'];
 
-        // Blast huge, minimal papers that fly completely off the screen very quickly
+        // Blast heavy, minimal papers (just a few) that shoot far right and drop super fast
         confetti({
-            particleCount: 20,       // Minimal to avoid overlapping, but enough to fill screen
-            spread: 360,             // Blast in all directions
-            startVelocity: 65,       // Very high velocity to shoot them out fast
+            particleCount: 5,        // Very few papers per click!
+            angle: 60,               // Shoot up and right to cross the screen
+            spread: 90,              // Spread wide enough to cover center/left too
+            startVelocity: 90,       // High velocity to reach the right side
             origin: { x: originX, y: originY },
             colors: vibrantColors,
-            shapes: customShapes,
-            scalar: 4,               // Huge shapes
-            ticks: 350,              // ~5 seconds max lifetime
-            gravity: 1.2,            // High gravity so they fall out of the screen fast
-            decay: 0.9               // Natural drag
+            shapes: basicShapes,
+            scalar: 4.5,             // Keep them huge
+            ticks: 200,              // Short lifetime, but they will leave screen due to gravity
+            gravity: 2.5,            // Very heavy, falls completely out of the screen fast!
+            decay: 0.94              // Hold speed long enough to cross screen
         });
     });
 }
