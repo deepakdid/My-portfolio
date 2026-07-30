@@ -265,33 +265,33 @@ if (avatarBadge) {
         const originX = (rect.left + rect.width / 2) / window.innerWidth;
         const originY = (rect.top + rect.height / 2) / window.innerHeight;
 
-        // Pastel colors only
-        const pastelColors = ['#FFB3BA', '#FFDFBA', '#FFFFBA', '#BAFFC9', '#BAE1FF', '#E8B3FF'];
+        // Bold, vibrant colors (Pink, Blue, Green, Orange, Yellow)
+        const vibrantColors = ['#FF3366', '#3388FF', '#44D62C', '#FF9900', '#FFD500'];
         
-        let customShapes = ['square'];
+        let customShapes = [];
         if (typeof confetti.shapeFromPath === 'function') {
-            // Spring/squiggly line shape (made a bit longer and more curvy)
-            const squiggly = confetti.shapeFromPath({ path: 'M -20 0 Q -10 -25 0 0 T 20 0 T 40 0', matrix: [0.8, 0, 0, 0.8, -10, 0] });
-            const squiggly2 = confetti.shapeFromPath({ path: 'M -15 0 C -5 -20 5 -20 15 0 C 25 20 35 20 45 0', matrix: [0.8, 0, 0, 0.8, -15, 0] });
-            // Rectangle shape
-            const rectangle = confetti.shapeFromPath({ path: 'M -25 -8 L 25 -8 L 25 8 L -25 8 Z', matrix: [1, 0, 0, 1, 0, 0] });
+            // Clean spring/squiggly shapes
+            const spring1 = confetti.shapeFromPath({ path: 'M -20 0 Q -10 -15 0 0 T 20 0 T 40 0', matrix: [0.8, 0, 0, 0.8, -10, 0] });
+            const spring2 = confetti.shapeFromPath({ path: 'M -15 0 C -5 -20 5 20 15 0 C 25 -20 35 20 45 0', matrix: [0.8, 0, 0, 0.8, -15, 0] });
             
-            // Add spring shapes multiple times to make them appear a lot
-            customShapes.push(squiggly, squiggly2, squiggly, rectangle, 'circle');
+            // Only spring shapes!
+            customShapes.push(spring1, spring2);
+        } else {
+            customShapes = ['square'];
         }
 
-        // Blast huge, minimal papers that fly completely off the screen
+        // Blast huge, minimal papers that fly completely off the screen very quickly
         confetti({
-            particleCount: 15,       // Very minimal to avoid overlapping
-            spread: 360,             // Blast in all directions (top, bottom, left, right)
-            startVelocity: 85,       // High velocity to reach the edges of the screen
+            particleCount: 15,       // Minimal to avoid overlapping
+            spread: 360,             // Blast in all directions
+            startVelocity: 75,       // Very high velocity to shoot them out fast
             origin: { x: originX, y: originY },
-            colors: pastelColors,
+            colors: vibrantColors,
             shapes: customShapes,
-            scalar: 4.5,             // Size is even bigger
-            ticks: 1000,             // Never fade out, they will leave the screen boundaries naturally
-            gravity: 0.8,            // Enough gravity to pull them down slowly
-            decay: 0.9               // Slow decay so they hold their speed to reach edges
+            scalar: 4,               // Huge shapes
+            ticks: 300,              // ~5 seconds max lifetime
+            gravity: 1.8,            // High gravity so they fall completely out of the screen fast
+            decay: 0.88              // Faster decay horizontally so they drop vertically sooner
         });
     });
 }
