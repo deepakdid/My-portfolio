@@ -260,47 +260,51 @@ if (avatarBadge) {
     avatarBadge.title = 'Click me!';
     
     avatarBadge.addEventListener('click', () => {
-        const duration = 3500; // 3.5 seconds
-        const end = Date.now() + duration;
+        // Calculate center of the avatar relative to the viewport
+        const rect = avatarBadge.getBoundingClientRect();
+        const originX = (rect.left + rect.width / 2) / window.innerWidth;
+        const originY = (rect.top + rect.height / 2) / window.innerHeight;
 
-        (function frame() {
-            // Left edge
-            confetti({
-                particleCount: 5,
-                angle: 60,
-                spread: 55,
-                origin: { x: 0, y: 1 },
-                colors: ['#FF6B6B', '#4ECDC4', '#FFE66D', '#FF9F1C', '#2EC4B6', '#FFD6B3'],
-                ticks: 600, // Roughly 10 seconds of lifetime
-                startVelocity: 50 + Math.random() * 20
-            });
-            // Right edge
-            confetti({
-                particleCount: 5,
-                angle: 120,
-                spread: 55,
-                origin: { x: 1, y: 1 },
-                colors: ['#FF6B6B', '#4ECDC4', '#FFE66D', '#FF9F1C', '#2EC4B6', '#FFD6B3'],
-                ticks: 600,
-                startVelocity: 50 + Math.random() * 20
-            });
-            
-            // Minimal splash from the center bottom as well
-            if (Math.random() > 0.5) {
-                confetti({
-                    particleCount: 2,
-                    angle: 90,
-                    spread: 80,
-                    origin: { x: 0.5, y: 1 },
-                    colors: ['#FF6B6B', '#4ECDC4', '#FFE66D', '#FF9F1C', '#2EC4B6', '#FFD6B3'],
-                    ticks: 600,
-                    startVelocity: 60 + Math.random() * 20
-                });
-            }
+        const colors = ['#FF1493', '#00BFFF', '#32CD32', '#FF8C00', '#FFD700', '#FF69B4', '#8A2BE2'];
+        
+        // Add custom shapes if supported, else fallback to standard
+        let customShapes = ['square', 'circle'];
+        if (typeof confetti.shapeFromPath === 'function') {
+            // Squiggly line shape
+            const squiggly = confetti.shapeFromPath({ path: 'M -15 0 Q -7 -15 0 0 T 15 0', matrix: [1, 0, 0, 1, 0, 0] });
+            // Rectangle shape
+            const rectangle = confetti.shapeFromPath({ path: 'M -20 -5 L 20 -5 L 20 5 L -20 5 Z', matrix: [1, 0, 0, 1, 0, 0] });
+            customShapes.push(squiggly, rectangle);
+        }
 
-            if (Date.now() < end) {
-                requestAnimationFrame(frame);
-            }
-        }());
+        // Blast big, minimal shapes from the center
+        confetti({
+            particleCount: 25, // Minimal pieces
+            spread: 360,       // All directions
+            startVelocity: 45, 
+            origin: { x: originX, y: originY },
+            colors: colors,
+            shapes: customShapes,
+            scalar: 3.5,       // Much bigger papers
+            ticks: 200,        // Disappear after ~3.3 seconds
+            gravity: 1,
+            decay: 0.94
+        });
+        
+        // A second smaller pop with even bigger shapes for depth
+        setTimeout(() => {
+            confetti({
+                particleCount: 15,
+                spread: 360,
+                startVelocity: 35,
+                origin: { x: originX, y: originY },
+                colors: colors,
+                shapes: ['square'],
+                scalar: 5,     // Massive pieces
+                ticks: 250,    // Disappear after ~4 seconds
+                gravity: 0.8,
+                decay: 0.92
+            });
+        }, 100);
     });
 }
