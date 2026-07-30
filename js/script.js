@@ -252,3 +252,55 @@ if (currentPath === 'about.html') {
         navObserver.observe(section);
     });
 }
+
+// Avatar Confetti Celebration
+const avatarBadge = document.querySelector('.avatar-badge');
+if (avatarBadge) {
+    avatarBadge.style.cursor = 'pointer';
+    avatarBadge.title = 'Click me!';
+    
+    avatarBadge.addEventListener('click', () => {
+        const duration = 3500; // 3.5 seconds
+        const end = Date.now() + duration;
+
+        (function frame() {
+            // Left edge
+            confetti({
+                particleCount: 5,
+                angle: 60,
+                spread: 55,
+                origin: { x: 0, y: 1 },
+                colors: ['#FF6B6B', '#4ECDC4', '#FFE66D', '#FF9F1C', '#2EC4B6', '#FFD6B3'],
+                ticks: 600, // Roughly 10 seconds of lifetime
+                startVelocity: 50 + Math.random() * 20
+            });
+            // Right edge
+            confetti({
+                particleCount: 5,
+                angle: 120,
+                spread: 55,
+                origin: { x: 1, y: 1 },
+                colors: ['#FF6B6B', '#4ECDC4', '#FFE66D', '#FF9F1C', '#2EC4B6', '#FFD6B3'],
+                ticks: 600,
+                startVelocity: 50 + Math.random() * 20
+            });
+            
+            // Minimal splash from the center bottom as well
+            if (Math.random() > 0.5) {
+                confetti({
+                    particleCount: 2,
+                    angle: 90,
+                    spread: 80,
+                    origin: { x: 0.5, y: 1 },
+                    colors: ['#FF6B6B', '#4ECDC4', '#FFE66D', '#FF9F1C', '#2EC4B6', '#FFD6B3'],
+                    ticks: 600,
+                    startVelocity: 60 + Math.random() * 20
+                });
+            }
+
+            if (Date.now() < end) {
+                requestAnimationFrame(frame);
+            }
+        }());
+    });
+}
